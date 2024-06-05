@@ -6,22 +6,22 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger
 } from "@/components/ui/tooltip";
 
 interface ActionTooltipProps {
   label: string;
   children: React.ReactNode;
-  side?: "top" | "bottom" | "right" | "left";
+  side?: "top" | "right" | "bottom" | "left";
   align?: "start" | "center" | "end";
 }
 
-export const ActionTooltip = ({
-  label,
+export function ActionTooltip({
   children,
-  side,
+  label,
   align,
-}: ActionTooltipProps) => {
+  side
+}: ActionTooltipProps) {
   return (
     <TooltipProvider>
       <Tooltip delayDuration={50}>
@@ -34,4 +34,4 @@ export const ActionTooltip = ({
       </Tooltip>
     </TooltipProvider>
   );
-};
+}
