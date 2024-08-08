@@ -1,85 +1,82 @@
-# Fullstack Discord Clone: Next.js 13, React, Socket.io, Prisma, Tailwind, MySQL | Full Course 2023
+# Fullstack Zoomer Chat App: Next.js 13, React, LiveKit, Prisma, Tailwind, MySQL | Full Course 2023
 
-This is a repository for Fullstack Discord Clone: Next.js 13, React, Socket.io, Prisma, Tailwind, MySQL 
+This repository contains the source code for a full-stack Zoomer-friendly chat application built using Next.js 13, React, LiveKit, Prisma, Tailwind, and MySQL. 💻🤖
 
-Features:
+## Features 🚀
 
-- Real-time messaging using Socket.io
-- Send attachments as messages using UploadThing
-- Delete & Edit messages in real time for all users
-- Create Text, Audio and Video call Channels
-- 1:1 conversation between members
-- 1:1 video calls between members
-- Member management (Kick, Role change Guest / Moderator)
-- Unique invite link generation & full working invite system
-- Infinite loading for messages in batches of 10 (tanstack/query)
-- Server creation and customization
-- Beautiful UI using TailwindCSS and ShadcnUI
-- Full responsivity and mobile UI
-- Light / Dark mode
-- Websocket fallback: Polling with alerts
-- ORM using Prisma
-- MySQL database using Planetscale
-- Authentication with Clerk
+- **Real-time Messaging**: Users can send and receive messages in real-time using LiveKit. 💬
+- **Attachment Uploads**: Users can send attachments (images, documents, etc.) as messages using UploadThing. 📁
+- **Message Editing and Deletion**: Users can edit and delete their own messages in real-time, and the changes are reflected for all other users. ✏️🗑️
+- **Text, Audio, and Video Channels**: Users can create and join text, audio, and video call channels. 🎥🎙️
+- **1:1 Conversations**: Users can initiate private 1:1 conversations with other members. 👥
+- **1:1 Video Calls**: Users can make 1:1 video calls with other members. 📽️
+- **Member Management**: Administrators can kick members and change their roles (Guest/Moderator). 🚫👑
+- **Invite System**: Users can generate unique invite links and use them to invite new members. 🔗🤝
+- **Infinite Message Loading**: The app uses tanstack/query to load messages in batches of 10 for an infinite scrolling experience. 🔄
+- **Server Creation and Customization**: Users can create and customize their own servers. 🏢🛠️
+- **Beautiful UI**: The app uses Tailwind CSS and Shadcn UI components for a modern and responsive user interface. 🎨
+- **Light/Dark Mode**: The app supports light and dark mode. 🌞🌛
+- **ORM with Prisma**: The app uses Prisma as the ORM for interacting with the MySQL database. 🗃️
+- **Authentication with Clerk**: The app uses Clerk for user authentication. 🔑
 
-### Prerequisites
+## Prerequisites 🔍
 
-**Node version 18.x.x**
+- **Node.js version 18.x.x**
 
-### Cloning the repository
+## Cloning the Repository 📁
 
 ```shell
 git clone https://github.com/AntonioErdeljac/next13-discord-clone.git
 ```
 
-### Install packages
+## Installation 🛠️
 
-```shell
-npm i
-```
+1. Install the required packages:
 
-### Setup .env file
+   ```shell
+   npm i
+   ```
 
+2. Set up the `.env` file:
 
-```js
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
+   ```js
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
+   DATABASE_URL=
+   UPLOADTHING_SECRET=
+   UPLOADTHING_APP_ID=
+   LIVEKIT_API_KEY=
+   LIVEKIT_API_SECRET=
+   NEXT_PUBLIC_LIVEKIT_URL=
+   ```
 
+3. Set up Prisma:
 
-DATABASE_URL=
+   - Add a Postgres database (I used NeonDB)
+   - Run the following commands:
+     ```shell
+     npx prisma generate
+     npx prisma db push
+     ```
 
-UPLOADTHING_SECRET=
-UPLOADTHING_APP_ID=
+4. Start the app:
 
-LIVEKIT_API_KEY=
-LIVEKIT_API_SECRET=
-NEXT_PUBLIC_LIVEKIT_URL=
-```
+   ```shell
+   npm run dev
+   ```
 
-### Setup Prisma
+## Available Commands 🤖
 
-Add Postgres Database (I used NeonDB)
+Running commands with `npm run [command]`:
 
-```shell
-npx prisma generate
-npx prisma db push
+| Command | Description                              |
+| :------ | :--------------------------------------- |
+| `dev`   | Starts a development instance of the app |
 
-```
+## Contributions 🤝
 
-### Start the app
-
-```shell
-npm run dev
-```
-
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue. 🙏
